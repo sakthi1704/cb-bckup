@@ -1,0 +1,269 @@
+@import "./variables";
+.about-main-div{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $about-you-bg-color;
+  .lens{
+    position: fixed;
+    left: -20vh;
+    right: -15vh;
+    top: 6vh;
+  }
+  .logo-div {
+    position: fixed;
+    width: 30vw;
+    top: 2vh;
+    right: 2vh;
+  }
+  .about-content {
+    position: fixed;
+    // top: 23vh;
+    top:20vh; //new
+    bottom: 12vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+    @media screen and (max-height:460px ) {
+      top: 22vh;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      padding: 20px;
+      height: 22em;
+    }
+    padding: 20px;
+    padding-top: 0px; //new
+    .tell-us{
+      margin-bottom: 10px;
+    }
+    .gender-div{
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 15px;
+      .gender-title{
+        font-size: 13px;
+        margin-bottom: 10px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 30%;
+      }
+      .gender-images{
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        width: 70%;
+        .gender-text {
+          font-size: 12px;
+        }
+        span{
+        /*  &:first-child{
+            margin-left: 14%;
+          }*/
+          width: 40%;
+          float: left;
+          margin-right: 15px;
+          position: relative;
+          .ui.circular.button{
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: $circular-active-button-bg;
+            color:#ffffff;
+            padding:5px;
+          }
+        }
+      }
+    }
+
+    /*Other info*/
+    .other-info{
+      margin-top: 10px;
+      .row{
+        padding: 0 15px;
+      }
+      .range-slider,.dropdown-select{
+        width: 100%;
+      }
+      .heading{
+        margin-bottom: 0px;
+        font-size: 12px;
+      }
+      .ui.checkbox{
+        label{
+          font-size:12px;
+        }
+        margin-bottom: 10px;
+      }
+      .submit-button-div{
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        button{
+          background-color: $about-you-bg-color;
+          color:#ffffff;
+          border-radius: 0px;
+          font-family: $helvatica-regular;
+          &:focus,:hover{
+            background-color: $about-you-bg-color;
+            color:#ffffff;
+          }
+        }
+      }
+
+      /*Range slider*/
+      .range-slider{
+        .rangeslider-horizontal{
+          border-radius: 15px;
+          height: 12px;
+          .rangeslider__fill{
+            border-radius: 15px;
+            background-color: $range-slider-bg-color;
+            box-shadow:none;
+          }
+          .rangeslider__handle{
+            border: none;
+            box-shadow: none;
+            background-color: $range-slider-bg-color;
+            height: 25px;
+            width: 25px;
+            &:focus{
+              outline:none;
+            }
+            &:after{
+              background-color: $range-slider-bg-color;
+              box-shadow: none;
+              width: 0px;
+              height: 0px;
+            }
+          }
+        }
+        .heading{
+          margin-bottom: 0px;
+          .value{
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.16);
+            padding: 9px;
+            border-radius: 3px;
+            float: right;
+          }
+        }
+
+      }
+
+      /*Dropdown select*/
+      .dropdown-select{
+        .ui.fluid.selection.dropdown{
+          border-radius: 0px;
+          background-color: $dropdown-bg-color;
+          border: none;
+          .menu{
+            border:none;
+            border-radius: 0px;
+            background-color: $dropdown-bg-color;
+            max-height: 22em !important;
+          }
+        }
+      }
+
+      /*Rc Slider*/
+      .range-slider-rc{
+        &.salary-range-slider{
+          margin-bottom: 25px;
+          .rc-slider-mark{
+            span:first-child{
+              margin-left:-28% !important;
+            }
+            span:last-child{
+              margin-left: -60% !important;
+            }
+          }
+        }
+        width: 100%;
+        margin-bottom: 30px;
+        .heading{
+          margin-bottom: 20px;
+          .value{
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.16);
+            padding: 9px;
+            border-radius: 3px;
+            float: right;
+          }
+        }
+        .rc-slider{
+          .rc-slider-handle{
+            background-color: $range-slider-bg-color;
+            border:none;
+            height: 20px;
+            width:20px;
+            margin-top: -8px;
+          }
+          .rc-slider-track{
+            background-color: $range-slider-bg-color;
+          }
+          .rc-slider-dot-active{
+            border-color: $range-slider-bg-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*Tablet specifications*/
+@media screen and (min-width:600px ) {
+  .about-main-div{
+    .lens{
+      position: fixed;
+      left: -14vh;
+      right: -21vh;
+      top: 4vh;
+    }
+    .about-content{
+      .other-info{
+        /*Range slider*/
+        .range-slider{
+          .rangeslider-horizontal{
+            border-radius: 15px;
+            height: 15px;
+            .rangeslider__fill{
+              border-radius: 15px;
+              background-color: $range-slider-bg-color;
+              box-shadow:none;
+            }
+            .rangeslider__handle{
+              border: none;
+              box-shadow: none;
+              background-color: $range-slider-bg-color;
+              height: 25px;
+              width: 25px;
+              &:focus{
+                outline:none;
+              }
+              &:after{
+                background-color: $range-slider-bg-color;
+                box-shadow: none;
+                width: 0px;
+                height: 0px;
+              }
+            }
+          }
+          .heading{
+            margin-bottom: 0px;
+            .value{
+              box-shadow: 0 0px 10px rgba(0, 0, 0, 0.16);
+              padding: 9px;
+              border-radius: 3px;
+              float: right;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}

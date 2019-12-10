@@ -1,0 +1,31 @@
+.vertical-line{
+    border-left: 1px solid black;
+    height: 200px;
+}
+.position-relative{
+position: relative;
+}
+.divider-class{
+    left: 79%;
+    border-left: 2px solid rgba(34,36,38,.15);
+    height: 60vh;
+    position: absolute;
+}
+.username-align{
+    left: 34%;
+    position: absolute;
+}
+.designation-align{
+    left: 27%;
+    position: absolute;
+}
+
+.edit-icon-align{
+    left: 73%;
+    top: 74%;
+    position: absolute;
+}
+.changeArea{
+    position: absolute;
+    right: 51px;
+}
